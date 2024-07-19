@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+<script type="text/javascript">
+
+	function send1(f){
+		
+		//입력값 체크...
+		
+		f.action="insert1.do";  // ParamTestController에 작성
+		f.submit();
+	}
+	
+	function send2(f){
+		
+		//입력값 체크...
+		
+		f.action="insert2.do";  // ParamTestController에 작성
+		f.submit();
+	}
+	
+	
+	function send3(f){
+		
+		//입력값 체크...
+		
+		f.action="insert3.do";  // ParamTestController에 작성
+		f.submit();
+	}
+
+</script>
+
+</head>
+<body>
+
+<form>
+	<table border="1">
+	   <tr>
+	      <th>이름</th>
+	      <td><input name="name"  value="홍길동"></td>
+	   </tr>
+	   
+	   <tr>
+	      <th>나이</th>
+	      <td><input name="age"  value="20"></td>
+	   </tr>
+	   
+	   <tr>
+	      <th>전화</th>
+	      <td><input name="tel" value="010-111-1234"></td>
+	   </tr>
+	   
+	   <tr>
+	      <td colspan="2" align="center">
+	      	 <!-- 파라미터를 낱개, 객체, Map으로 받는 법 해볼 것 -->
+	         <input type="button"  value="낱개로 받기"  onclick="send1(this.form);">
+	         <input type="button"  value="객체로 받기"  onclick="send2(this.form);">
+	         <input type="button"  value="Map으로 받기" onclick="send3(this.form);">	      
+	      </td>
+	   </tr>
+	   
+	</table>
+</form>
+
+</body>
+</html>
